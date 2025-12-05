@@ -15,16 +15,15 @@ Clustering groups unlabeled examples by similarity. The algorithm infers structu
 ---
 
 ## 🔹 Formal Algorithm
-1. Randomly initialize $ \mu_1, \mu_2, \dots, \mu_K $  
+1. Randomly initialize $\mu_1, \mu_2, \dots, \mu_K$  
 2. Repeat:
-   - Assign points:  
-     $$
-     c^{(i)} = \arg\min_k \| x^{(i)} - \mu_k \|
-     $$
-   - Update centroids:  
-     $$
-     \mu_k = \frac{1}{|C_k|} \sum_{i \in C_k} x^{(i)}
-     $$
+   - Assign points:
+     
+     $$c^{(i)} = \arg\min_k \| x^{(i)} - \mu_k \|$$
+     
+   - Update centroids:
+     
+     $$\mu_k = \frac{1}{|C_k|} \sum_{i \in C_k} x^{(i)}$$
 
 ---
 
