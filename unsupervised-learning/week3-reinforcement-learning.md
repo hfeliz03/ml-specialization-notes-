@@ -13,9 +13,9 @@ Applications:
 
 # 🔁 Discount Factor (γ)
 
-\[
+$$
 R = r_1 + \gamma r_2 + \gamma^2 r_3 + \dots
-\]
+$$
 
 Reward sooner → more valuable.
 
@@ -28,24 +28,24 @@ State transitions depend **only** on current state, not history.
 
 # 🧩 State-Action Value Function (Q-function)
 
-\[
+$$
 Q(s,a) = \text{return from choosing action } a \text{ in state } s
-\]
+$$
 
 Optimal choice:
 
-\[
+$$
 \pi(s) = \arg\max_a Q(s,a)
-\]
+$$
 
 ---
 
 # 🧮 Bellman Equation
 Defines Q recursively:
 
-\[
+$$
 Q(s,a) = r(s,a) + \gamma \max_{a'} Q(s', a')
-\]
+$$
 
 ---
 
@@ -57,9 +57,9 @@ Q(s,a) = r(s,a) + \gamma \max_{a'} Q(s', a')
 3. Store in **replay buffer**  
 4. Train using target:
 
-\[
+$$
 y = r + \gamma \max_{a'} Q(s', a')
-\]
+$$
 
 5. Update Q
 
@@ -67,12 +67,12 @@ y = r + \gamma \max_{a'} Q(s', a')
 
 # 🎯 ε-Greedy Policy
 
-\[
+$$
 \text{With prob } 1-\epsilon: \text{ exploit best action}
-\]
-\[
+$$
+$$
 \text{With prob } \epsilon: \text{ explore random action}
-\]
+$$
 
 Typical: \( \epsilon = 0.05 \)
 
