@@ -4,15 +4,15 @@
 
 Prediction:
 
-\[
+$$
 \hat{y}_{u,i} = w^{(u)T} x^{(i)} + b^{(u)}
-\]
+$$
 
 Cost (MSE, only for rated items):
 
-\[
+$$
 J = \sum_{(u,i) \in \text{rated}} (\hat{y}_{u,i} - y_{u,i})^2
-\]
+$$
 
 Optimize with gradient descent.
 
@@ -26,18 +26,18 @@ Learn simultaneously:
 
 CF solves:
 
-\[
+$$
 J(w,b,x) = J_{\text{users}} + J_{\text{items}}
-\]
+$$
 
 ---
 
 # 🔁 Binary Labels (Likes, Clicks)
 Use logistic regression:
 
-\[
+$$
 \hat{y} = \sigma(w^T x + b)
-\]
+$$
 
 Loss: **binary cross-entropy**.
 
@@ -49,9 +49,9 @@ Improves prediction and generalization.
 Process:
 - Compute mean per user  
 - Replace ratings with  
-  \[
+  $$
   r' = r - \mu
-  \]
+  $$
 
 Unseen ratings become 0.
 
@@ -60,9 +60,9 @@ Unseen ratings become 0.
 # 🔍 Finding Similar Items
 Compute:
 
-\[
+$$
 \| x^{(i)} - x^{(k)} \|^2
-\]
+$$
 
 Smaller distance → more similar.
 
@@ -90,9 +90,9 @@ Direction maximizing variance.
 Orthogonal to the first.
 
 ### Reconstruction
-\[
+$$
 \hat{x} = U_{\text{reduced}} z
-\]
+$$
 
 Applications:
 - Visualization  
